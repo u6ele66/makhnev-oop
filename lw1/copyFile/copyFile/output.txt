@@ -1,0 +1,1 @@
+Failed to openC:\Users\Lenovo\source\repos\copyFile\x64\Debug\copyFile.exe for writing 
