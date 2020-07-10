@@ -36,8 +36,8 @@ TEST_CASE("Sort some vect")
 
 TEST_CASE("Divide by zero")
 {
-	vector<float> vectTest = { 2, 1, 0 };
-	vector<float> vectRes = { 2, 1, 0 };
+	vector<float> vectTest = { 12, 5, 0 };
+	vector<float> vectRes = { 12, 5, 0 };
 	MultMaxDivMin(vectTest);
 	CHECK(vectTest == vectRes);
 }
