@@ -60,9 +60,9 @@ BOOST_AUTO_TEST_CASE(SaveTranslationTest)
 	};
 	map<string, string> _expected = {
 		{"hello", "Привет"},
-		{"camera", "камера"},
+		{"road", "дорога"},
 	};
-	SaveTranslation(_dictionary, "camera", "камера");
+	SaveTranslation(_dictionary, "road", "дорога");
 	BOOST_TEST(_dictionary == _expected);
 	cout << "\"SaveTranslation\" - Test Passed!\n";
 }
