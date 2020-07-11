@@ -17,7 +17,6 @@ int main(int argc, char* argv[])
 
     cout << GENERATING_TIME << END_TIME - START_TIME << " ms.\n";
 
-    /*PrintSet(PrimeNumbers);*/
     cout << "Количество простых чисел в диапазоне [" << MIN_BOUND << ", " << MAX_BOUND << "] равно - " << PrimeNumbers.size() << '\n';
 
 
