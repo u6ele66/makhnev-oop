@@ -7,17 +7,10 @@ void ConsoleInit()
 	SetConsoleOutputCP(1251);
 }
 
-void SetColor(ConsoleColor text)
-{
-	HANDLE hStdOut = GetStdHandle(STD_OUTPUT_HANDLE);
-	SetConsoleTextAttribute(hStdOut, (WORD)((Black << 4) | text));
-}
 
 void WaitNewMessage()
 {
-	SetColor(White);
 	cout << ">";
-	SetColor(Red);
 }
 
 string LowerCase(const string& message)
@@ -41,7 +34,6 @@ void SaveChanges(map<string, string> _dictionary)
 	{
 		dictionaryFile << item.first << '\n' << item.second << '\n';
 	}
-	SetColor(LightCyan);
 	cout << SUCCESSFUL_SAVING_MESSAGE;
 }
 
@@ -75,7 +67,6 @@ void ReadDictionary(map<string, string>& _dictionary)
 
 void SaveTranslation(map <string, string>& _dictionary, const string& word, const string& translation)
 {
-	SetColor(LightCyan);
 	cout << "—лово У" << word << "Ф сохранено в словаре как У" << translation << "Ф.\n";
 	_dictionary.insert(make_pair(LowerCase(word), translation));
 }
@@ -96,12 +87,10 @@ void RunTranslator(map <string, string>& _dictionary)
 			it = _dictionary.find(LowerCase(message));
 			if (it != _dictionary.end())
 			{
-				SetColor(LightCyan);
 				cout << GetTranslate(it) << '\n';
 			}
 			else
 			{
-				SetColor(LightCyan);
 				cout << "Ќеизвестное слово У" << message << "Ф. ¬ведите перевод или пустую строку дл€ отказа.\n";
 				WaitNewMessage();
 				buffer = message;
@@ -113,7 +102,6 @@ void RunTranslator(map <string, string>& _dictionary)
 				}
 				else
 				{
-					SetColor(LightCyan);
 					cout << "—лово У" << buffer << "Ф проигнорировано.\n";
 				}
 			}
@@ -122,7 +110,7 @@ void RunTranslator(map <string, string>& _dictionary)
 		{
 			if (isChanged)
 			{
-				SetColor(LightCyan);
+				
 				cout << SAVE_ALERT;
 				WaitNewMessage();
 				getline(cin, message);
@@ -133,14 +121,12 @@ void RunTranslator(map <string, string>& _dictionary)
 				}
 				else
 				{
-					SetColor(LightCyan);
 					cout << EXIT_WITHOUT_SAVING_MESSAGE;
 					break;
 				}
 			}
 			else
 			{
-				SetColor(LightCyan);
 				cout << NO_CHANGES_EXIT_MESSAGE;
 				break;
 			}

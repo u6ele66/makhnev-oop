@@ -10,26 +10,6 @@
 
 using namespace std;
 
-const enum ConsoleColor
-{
-	Black = 0,
-	Blue = 1,
-	Green = 2,
-	Cyan = 3,
-	Red = 4,
-	Magenta = 5,
-	Brown = 6,
-	LightGray = 7,
-	DarkGray = 8,
-	LightBlue = 9,
-	LightGreen = 10,
-	LightCyan = 11,
-	LightRed = 12,
-	LightMagenta = 13,
-	Yellow = 14,
-	White = 15
-};
-
 const string DICTIONARY_FILENAME = "Dictionary.txt";
 const string SAVE_ALERT = "В словарь были внесены изменения. Введите Y или y для сохранения перед выходом.\n";
 const string EXIT_WITHOUT_SAVING_MESSAGE = "Изменения не сохраненены. До свидания.\n";
