@@ -16,7 +16,8 @@ const std::string PREVIOUS_CHANNEL_SELECTED = "Previous channel selected\n";
 const std::string SELECTED_CHANNEL = "Selected channel ";
 const std::string CURRENT_CHANNEL = "Current channel ";
 const std::string ALREADY_ON = "TV is already on\n";
-const std::string ALREADY_OFF = "TV is already off\n";\
+const std::string ALREADY_OFF = "TV is already off\n";
+const std::string EXIT;
 
 class Control {
 public:

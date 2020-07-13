@@ -48,3 +48,8 @@ void CTVSet::SelectPreviousChannel()
 	if (!m_isEnable || m_previousChannel != 0)
 		std::swap(m_channel, m_previousChannel);
 }
+
+void CTVSet::Exit()
+{
+	exit(1);
+}

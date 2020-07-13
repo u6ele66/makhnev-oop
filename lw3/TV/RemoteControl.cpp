@@ -104,3 +104,4 @@ void Control::Controller(CTVSet& TV, std::istream& input, std::ostream& output)
 		}
 	}
 }
+
